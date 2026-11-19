@@ -77,14 +77,14 @@ Ikke rett produksjonskoden ennå.
 Utvid den eksisterende `[Theory]`-testen med de manglende dataradene fra tabellen.
 
 | Ønskede seter | Ledige seter | Forventet resultat |
-|---|---|---|
-| 1 | 4 | `true` |
-| 3 | 4 | `true` |
-| 4 | 4 | `true` |
-| 5 | 4 | `false` |
-| 0 | 4 | `false` |
-| -1 | 4 | `false` |
-| 1 | 0 | `false` |
+| ------------- | ------------ | ------------------ |
+| 1             | 4            | `true`             |
+| 3             | 4            | `true`             |
+| 4             | 4            | `true`             |
+| 5             | 4            | `false`            |
+| 0             | 4            | `false`            |
+| -1            | 4            | `false`            |
+| 1             | 0            | `false`            |
 
 Kontroller at du har totalt syv `[InlineData]`-rader.
 
@@ -123,4 +123,5 @@ Skriv i [REFLEKSJON.md](REFLEKSJON.md) hvilket testtilfelle som feilet først, h
 ## Ferdig når
 
 Du har én `[Theory]` med minst syv `[InlineData]`-rader, alle testtilfellene består, og du kan forklare hvorfor en reservasjon med like mange ønskede og ledige seter skal godkjennes.
-## 
+
+##
