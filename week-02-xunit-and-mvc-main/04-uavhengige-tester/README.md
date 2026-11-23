@@ -57,10 +57,10 @@ Lag tre nye `[Fact]`-tester.
 
 Hver test skal starte med et nytt `CargoBay`-objekt.
 
-| Testtilfelle | Forberedelse | Forventet resultat |
-|---|---|---|
-| Første innlegging | Nytt lasterom | `TryAdd("mat")` gir `true`, `Count` er 1 |
-| Andre innlegging | Nytt lasterom med én enhet | `TryAdd("vann")` gir `true`, `Count` er 2 |
+| Testtilfelle      | Forberedelse                 | Forventet resultat                                     |
+| ----------------- | ---------------------------- | ------------------------------------------------------ |
+| Første innlegging | Nytt lasterom                | `TryAdd("mat")` gir `true`, `Count` er 1               |
+| Andre innlegging  | Nytt lasterom med én enhet   | `TryAdd("vann")` gir `true`, `Count` er 2              |
 | Tredje innlegging | Nytt lasterom med to enheter | `TryAdd("verktøy")` gir `false`, `Count` er fortsatt 2 |
 
 Bruk Arrange–Act–Assert som i de tidligere oppgavene.
