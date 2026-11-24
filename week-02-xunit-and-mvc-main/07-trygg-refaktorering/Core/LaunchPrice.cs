@@ -2,18 +2,15 @@ namespace SpaceAcademy;
 
 public static class LaunchPrice
 {
-    public static int Calculate(int n, bool p)
+    public static int Calculate(int count, bool priority)
     {
-        int x = 0;
-        if (p)
+        if (priority)
         {
-            x = n * 100;
-            x = x + n * 20;
+            return count * 120;
         }
         else
         {
-            x = n * 100;
+            return count * 100;
         }
-        return x;
     }
 }
