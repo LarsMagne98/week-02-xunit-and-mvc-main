@@ -14,8 +14,8 @@ Du skal finne og rette feilen, og skrive tester som kontrollerer både rekkeføl
 
 ### Hva er en generisk stabel?
 
-Klassen `CargoStack<T>` er generisk. Det betyr at vi kan bruke samme klasse med forskjellige typer verdier.  
-  
+Klassen `CargoStack<T>` er generisk. Det betyr at vi kan bruke samme klasse med forskjellige typer verdier.
+
 For eksempel:
 
 ```csharp
@@ -61,13 +61,13 @@ Før du kjører testene, se for deg en tom stabel.
 
 Følg disse handlingene på papir:
 
-| Handling | Hva returnerer Pop? | Count etter handlingen |
-|---|---|---|
-| Ny stabel | – | |
-| `Push("A")` | – | |
-| `Push("B")` | – | |
-| `Pop()` | | |
-| `Pop()` | | |
+| Handling    | Hva returnerer Pop? | Count etter handlingen |
+| ----------- | ------------------- | ---------------------- |
+| Ny stabel   | –                   |                        |
+| `Push("A")` | –                   |                        |
+| `Push("B")` | –                   |                        |
+| `Pop()`     |                     |                        |
+| `Pop()`     |                     |                        |
 
 Hvilken verdi må komme ut først dersom stabelen følger LIFO-prinsippet?
 
@@ -169,15 +169,15 @@ dotnet test 05-unntak-og-generics/Tests/Tests.csproj
 
 Kontroller at testene dekker disse tilfellene:
 
-| Handling | Forventet resultat |
-|---|---|
-| Ny `CargoStack<string>` | `Count == 0` |
-| `Push("A")`, `Push("B")` | `Count == 2` |
-| Første `Pop()` | `"B"`, `Count == 1` |
-| Andre `Pop()` | `"A"`, `Count == 0` |
-| `Pop()` på tom stabel | `InvalidOperationException`, `Count == 0` |
-| `Push("C")` etter tømming, deretter `Pop()` | `"C"`, `Count == 0` |
-| `Push(7)`, `Pop()` med `CargoStack<int>` | `7`, `Count == 0` |
+| Handling                                    | Forventet resultat                        |
+| ------------------------------------------- | ----------------------------------------- |
+| Ny `CargoStack<string>`                     | `Count == 0`                              |
+| `Push("A")`, `Push("B")`                    | `Count == 2`                              |
+| Første `Pop()`                              | `"B"`, `Count == 1`                       |
+| Andre `Pop()`                               | `"A"`, `Count == 0`                       |
+| `Pop()` på tom stabel                       | `InvalidOperationException`, `Count == 0` |
+| `Push("C")` etter tømming, deretter `Pop()` | `"C"`, `Count == 0`                       |
+| `Push(7)`, `Pop()` med `CargoStack<int>`    | `7`, `Count == 0`                         |
 
 Skriv i [REFLEKSJON.md](REFLEKSJON.md) hva som feilet i starten, hva du endret, og hvordan testresultatene ble etterpå.
 
@@ -201,4 +201,3 @@ Svar på spørsmålene i [REFLEKSJON.md](REFLEKSJON.md):
 1. Hvorfor ville det vært feil å endre testen slik at den forventer det utilsiktede unntaket?
 2. Hvorfor bruker vi `Assert.Throws` i stedet for `Assert.Equal` når vi tester et forventet unntak?
 3. Hva viser testene med `CargoStack<string>` og `CargoStack<int>` om generiske klasser?
-
