@@ -10,7 +10,7 @@ Du skal bruke **testdrevet utvikling (TDD)** for å implementere fullføringen.
 
 ## Dette trenger du å vite
 
-TDD står for *Test-Driven Development*, eller testdrevet utvikling.
+TDD står for _Test-Driven Development_, eller testdrevet utvikling.
 
 I TDD jobber vi i tre steg:
 
@@ -152,11 +152,11 @@ Hvis koden allerede er enkel og tydelig, trenger du ikke endre noe.
 
 Skriv i [REFLEKSJON.md](REFLEKSJON.md) hva som skjedde i de forskjellige fasene:
 
-| Fase | Hva skal du dokumentere? |
-|---|---|
-| Red | Hvilken test skrev du, og hvorfor feilet den? |
-| Green | Hva endret du i produksjonskoden, og hva ble testresultatet? |
-| Refactor | Forbedret du noe? Hvis ikke, hvorfor var det unødvendig? |
+| Fase     | Hva skal du dokumentere?                                     |
+| -------- | ------------------------------------------------------------ |
+| Red      | Hvilken test skrev du, og hvorfor feilet den?                |
+| Green    | Hva endret du i produksjonskoden, og hva ble testresultatet? |
+| Refactor | Forbedret du noe? Hvis ikke, hvorfor var det unødvendig?     |
 
 Beskriv også resultatet av testen med to `Complete()`-kall.
 
