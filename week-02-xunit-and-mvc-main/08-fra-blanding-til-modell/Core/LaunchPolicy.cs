@@ -4,7 +4,10 @@ public static class LaunchPolicy
 {
     public static bool CanLaunch(int fuel, bool safetyApproved)
     {
-        // TODO: Flytt regelen hit, drevet av testene.
+        if (fuel >= 50 && safetyApproved)
+        {
+            return true;
+        }
         return false;
     }
 }
