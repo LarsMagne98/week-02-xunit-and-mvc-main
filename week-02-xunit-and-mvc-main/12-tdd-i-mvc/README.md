@@ -10,7 +10,7 @@ Nå kommer et nytt behov fra besetningen:
 
 Du skal legge til menyvalg `4. Vis ufullførte` i konsollapplikasjonen.
 
-Bruk TDD (*Red–Green–Refactor*) til å utvikle funksjonaliteten i modellen. Deretter skal du koble den til kontrolleren og gjenbruke den eksisterende visningen.
+Bruk TDD (_Red–Green–Refactor_) til å utvikle funksjonaliteten i modellen. Deretter skal du koble den til kontrolleren og gjenbruke den eksisterende visningen.
 
 Målet er å legge til funksjonalitet uten å ødelegge det som allerede fungerer.
 
@@ -240,19 +240,19 @@ dotnet run --project 12-tdd-i-mvc/App/App.csproj
 
 Utfør handlingene i tabellen **i samme programkjøring og i oppgitt rekkefølge**.
 
-| Steg | Handling | Forventet resultat |
-|---|---|---|
-| 1 | Velg `4` på tom tavle | `Ingen oppdrag.` |
-| 2 | Legg til `Sjekk antenne` | Oppdrag 1 opprettes |
-| 3 | Legg til `Lad rover` | Oppdrag 2 opprettes |
-| 4 | Velg `4` | Begge oppdrag vises som `Venter` |
-| 5 | Velg `3`, fullfør ID `1` | Oppdraget fullføres |
-| 6 | Velg `4` | Bare `2: Lad rover [Venter]` vises |
-| 7 | Velg `2` | Begge oppdrag vises, med riktig status |
-| 8 | Velg `3`, fullfør ID `2` | Oppdraget fullføres |
-| 9 | Velg `4` | `Ingen oppdrag.` |
-| 10 | Velg `2` | Begge oppdragene vises som `Fullført` |
-| 11 | Velg `0` | Programmet avsluttes |
+| Steg | Handling                 | Forventet resultat                     |
+| ---- | ------------------------ | -------------------------------------- |
+| 1    | Velg `4` på tom tavle    | `Ingen oppdrag.`                       |
+| 2    | Legg til `Sjekk antenne` | Oppdrag 1 opprettes                    |
+| 3    | Legg til `Lad rover`     | Oppdrag 2 opprettes                    |
+| 4    | Velg `4`                 | Begge oppdrag vises som `Venter`       |
+| 5    | Velg `3`, fullfør ID `1` | Oppdraget fullføres                    |
+| 6    | Velg `4`                 | Bare `2: Lad rover [Venter]` vises     |
+| 7    | Velg `2`                 | Begge oppdrag vises, med riktig status |
+| 8    | Velg `3`, fullfør ID `2` | Oppdraget fullføres                    |
+| 9    | Velg `4`                 | `Ingen oppdrag.`                       |
+| 10   | Velg `2`                 | Begge oppdragene vises som `Fullført`  |
+| 11   | Velg `0`                 | Programmet avsluttes                   |
 
 Når det ikke finnes noen ufullførte oppdrag, vil `ShowTasks()` vise `Ingen oppdrag.` fordi den mottar en tom liste. Det betyr ikke at tavlen er tømt.
 
@@ -285,12 +285,12 @@ Husk forskjellen:
 
 Skriv i [REFLEKSJON.md](REFLEKSJON.md):
 
-| Del | Hva skal du dokumentere? |
-|---|---|
-| Red | Hvilke tester feilet før implementasjonen, og hvorfor? |
-| Green | Hva endret du i `GetPending()`, og hva ble testresultatet? |
-| Refactor | Forbedret du noe? Hvis ikke, hvorfor var det unødvendig? |
-| MVC | Hvilke endringer gjorde du i Model, View og Controller? |
+| Del              | Hva skal du dokumentere?                                            |
+| ---------------- | ------------------------------------------------------------------- |
+| Red              | Hvilke tester feilet før implementasjonen, og hvorfor?              |
+| Green            | Hva endret du i `GetPending()`, og hva ble testresultatet?          |
+| Refactor         | Forbedret du noe? Hvis ikke, hvorfor var det unødvendig?            |
+| MVC              | Hvilke endringer gjorde du i Model, View og Controller?             |
 | Manuell kontroll | Hva skjedde da du testet menyvalg 4 og deretter viste alle oppdrag? |
 
 Gjør deg også klar til en kort individuell kodegjennomgang der du kan vise hvor du implementerte funksjonaliteten, og forklare hvorfor endringene hører hjemme akkurat der.
