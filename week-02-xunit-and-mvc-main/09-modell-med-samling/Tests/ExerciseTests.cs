@@ -52,4 +52,55 @@ public class ExerciseTests
         copy.Clear();
         Assert.Equal(1, board.Count);
     }
+
+    [Fact]
+    public void Empty_Board()
+    {
+        var board = new MissionBoard();
+        var copy = board.GetAll();
+
+        Assert.Equal(0, board.Count);
+        Assert.Empty(copy);
+    }
+
+    [Fact]
+    public void CanReComplete()
+    {
+        var board = new MissionBoard();
+        var item = board.Add("Sjekk");
+
+        bool first = board.Complete(1);
+        bool second = board.Complete(1);
+
+        Assert.True(first);
+        Assert.True(second);
+        Assert.True(item.IsCompleted);
+        Assert.Equal(1, board.Count);
+
+    }
+
+    [Fact]
+    public void IndependentBoards()
+    {
+        var board = new MissionBoard();
+        var task = new MissionBoard();
+
+        var item = board.Add("Ting");
+
+        Assert.Equal(1, board.Count);
+        Assert.Equal(0, task.Count);
+        Assert.Equal(1, item.Id);
+    }
+
+    [Fact]
+    public void CopyContains_SameObjects()
+    {
+        var board = new MissionBoard();
+        var item = board.Add("Tang");
+
+        var copy = board.GetAll();
+
+        Assert.Same(item, copy[0]);
+    }
+
 }

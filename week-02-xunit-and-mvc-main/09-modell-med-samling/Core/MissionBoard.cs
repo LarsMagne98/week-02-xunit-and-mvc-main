@@ -21,7 +21,14 @@ public class MissionBoard
 
     public bool Complete(int id)
     {
-        // TODO: Finn oppdraget og deleger fullføring.
+        foreach (MissionTask task in _tasks)
+        {
+            if (task.Id == id)
+            {
+                task.Complete();
+                return true;
+            }
+        }
         return false;
     }
 }

@@ -176,16 +176,16 @@ Kontroller at alle åtte testene består.
 
 Testene skal nå dekke følgende oppførsel:
 
-| Handling | Forventet resultat |
-|---|---|
-| Opprett en ny tavle | `Count == 0`, `GetAll()` er tom |
-| Legg til to oppdrag | ID 1 og 2, begge ufullførte |
-| Fullfør ID 2 | `true`, bare oppdrag 2 er fullført |
-| Fullfør ukjent ID 99 | `false`, ingen oppdrag endres |
-| Fullfør samme ID to ganger | Begge kall gir `true`, oppdraget er fortsatt fullført |
-| Tøm listen fra `GetAll()` | Tavlens `Count` er uendret |
-| Opprett to forskjellige tavler | De har uavhengig tilstand og ID-telling |
-| Sammenlign oppdraget fra `Add()` med objektet fra `GetAll()` | `Assert.Same()` består |
+| Handling                                                     | Forventet resultat                                    |
+| ------------------------------------------------------------ | ----------------------------------------------------- |
+| Opprett en ny tavle                                          | `Count == 0`, `GetAll()` er tom                       |
+| Legg til to oppdrag                                          | ID 1 og 2, begge ufullførte                           |
+| Fullfør ID 2                                                 | `true`, bare oppdrag 2 er fullført                    |
+| Fullfør ukjent ID 99                                         | `false`, ingen oppdrag endres                         |
+| Fullfør samme ID to ganger                                   | Begge kall gir `true`, oppdraget er fortsatt fullført |
+| Tøm listen fra `GetAll()`                                    | Tavlens `Count` er uendret                            |
+| Opprett to forskjellige tavler                               | De har uavhengig tilstand og ID-telling               |
+| Sammenlign oppdraget fra `Add()` med objektet fra `GetAll()` | `Assert.Same()` består                                |
 
 Hvis en test feiler, undersøk først hva den forventer og hva som faktisk skjer.
 
@@ -244,4 +244,3 @@ Hent deretter listen med `GetAll()`.
 Bruk `Assert.Same()` til å sammenligne det opprinnelige objektet med objektet du finner i listen.
 
 </details>
-
